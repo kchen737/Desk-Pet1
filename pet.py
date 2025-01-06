@@ -33,7 +33,7 @@ class DeskPet(QtWidgets.QLabel):
     def startIdle(self):
         self.setFixedSize(130, 130)
         self.currentAction = self.startIdle
-        self.images = self.loadImages("Deskpet/resource/xianzhi")
+        self.images = self.loadImages("resource/xianzhi")
         self.currentImage = 0
         self.timer.start(100)
         self.moveSpeed = 0
@@ -46,7 +46,7 @@ class DeskPet(QtWidgets.QLabel):
         if not self.isDragging:
             self.currentAction = self.startWalk
             direction = random.choice(["zuo", "you"])
-            self.images = self.loadImages(f"Deskpet/resource/sanbu/{direction}")
+            self.images = self.loadImages(f"resource/sanbu/{direction}")
             self.currentImage = 0
             self.movingDirection = -1 if direction == "zuo" else 1
             self.moveSpeed = 50
@@ -64,9 +64,9 @@ class DeskPet(QtWidgets.QLabel):
                 self.timer.stop()
                 self.images = []  # 清空当前图片列表
                 if self.movingDirection == -1:  # 向左移动
-                    self.images = self.loadImages("Deskpet/resource/sanbu/zuo")
+                    self.images = self.loadImages("resource/sanbu/zuo")
                 else:  # 向右移动
-                    self.images = self.loadImages("Deskpet/resource/sanbu/you")
+                    self.images = self.loadImages("resource/sanbu/you")
 
                 self.currentImage = 0
                 self.timer.start(100)
@@ -79,9 +79,9 @@ class DeskPet(QtWidgets.QLabel):
                 self.images = []  # 清空当前图片列表
                 # 根据移动方向加载对应的图片
                 if self.movingDirection == -1:  # 向左移动
-                    self.images = self.loadImages("Deskpet/resource/sanbu/zuo")
+                    self.images = self.loadImages("resource/sanbu/zuo")
                 else:  # 向右移动
-                    self.images = self.loadImages("Deskpet/resource/sanbu/you")
+                    self.images = self.loadImages("resource/sanbu/you")
 
                 self.currentImage = 0
                 self.timer.start(100)
@@ -97,7 +97,7 @@ class DeskPet(QtWidgets.QLabel):
     def startMeet(self):
         self.setFixedSize(150, 150)
         self.currentAction = self.startMeet
-        self.images = self.loadImages("Deskpet/resource/meet")
+        self.images = self.loadImages("resource/meet")
         self.currentImage = 0
         self.moveSpeed = 0
         self.movingDirection = 0
@@ -106,7 +106,7 @@ class DeskPet(QtWidgets.QLabel):
     def startLift(self):
         self.setFixedSize(160, 160)
         self.currentAction = self.startLift
-        self.images = self.loadImages("Deskpet/resource/linqi")
+        self.images = self.loadImages("resource/linqi")
         self.currentImage = 0
         self.moveSpeed = 0
         self.movingDirection = 0
@@ -115,7 +115,7 @@ class DeskPet(QtWidgets.QLabel):
     def startFall(self):
         self.setFixedSize(150, 150)
         self.currentAction = self.startFall
-        self.images = self.loadImages("Deskpet/resource/xialuo")
+        self.images = self.loadImages("resource/xialuo")
         self.currentImage = 0
         self.movingDirection = 0
         self.moveSpeed = 5
@@ -184,7 +184,7 @@ class DeskPet(QtWidgets.QLabel):
     def Snack(self):
         self.setFixedSize(160, 130)
         self.currentAction = self.sleep
-        self.images = self.loadImages("Deskpet/resource/snack")
+        self.images = self.loadImages("resource/snack")
         self.currentImage = 0
         self.timer.start(100)
         self.moveSpeed = 0
@@ -195,7 +195,7 @@ class DeskPet(QtWidgets.QLabel):
     def transform(self):
         self.setFixedSize(160, 130)
         self.currentAction = self.transform
-        self.images = self.loadImages("Deskpet/resource/xiandanchaoren")
+        self.images = self.loadImages("resource/xiandanchaoren")
         self.currentImage = 0
         self.timer.start(100)
         self.moveSpeed = 0
@@ -204,7 +204,7 @@ class DeskPet(QtWidgets.QLabel):
     def pipi(self):
         self.setFixedSize(300, 130)
         self.currentAction = self.pipi
-        self.images = self.loadImages("Deskpet/resource/pipi")
+        self.images = self.loadImages("resource/pipi")
         self.currentImage = 0
         self.timer.start(25)
         self.moveSpeed = 0
@@ -213,7 +213,7 @@ class DeskPet(QtWidgets.QLabel):
     def exercise(self):
         self.setFixedSize(150,180 )
         self.currentAction = self.exercise
-        self.images = self.loadImages("Deskpet/resource/yundong")
+        self.images = self.loadImages("resource/yundong")
         self.currentImage = 0
         self.timer.start(125)
         self.moveSpeed = 0
@@ -222,7 +222,7 @@ class DeskPet(QtWidgets.QLabel):
     def eating(self):
         self.setFixedSize(160, 90)
         self.currentAction = self.eating
-        self.images = self.loadImages("Deskpet/resource/eat")
+        self.images = self.loadImages("resource/eat")
         self.currentImage = 0
         self.timer.start(25)
         self.moveSpeed = 0
@@ -232,7 +232,7 @@ class DeskPet(QtWidgets.QLabel):
     def sleep(self):
         self.setFixedSize(315, 500)
         self.currentAction = self.sleep
-        self.images = self.loadImages("Deskpet/resource/sleep")
+        self.images = self.loadImages("resource/sleep")
         self.currentImage = 0
         self.timer.start(155)
         self.moveSpeed = 0
@@ -249,7 +249,7 @@ class DeskPet(QtWidgets.QLabel):
         self.setFixedSize(180, 180)
         self.sleeping = False
         self.currentAction = self.WakeUp
-        self.images = self.loadImages("Deskpet/resource/waken")
+        self.images = self.loadImages("resource/waken")
         self.currentImage = 0
         self.timer.start(30)
         # 延时，等待所有图片加载完成
@@ -259,7 +259,7 @@ class DeskPet(QtWidgets.QLabel):
         self.setFixedSize(160, 150)
         self.sleeping = False
         self.currentAction = self.Ninjia
-        self.images = self.loadImages("Deskpet/resource/Ninjia")
+        self.images = self.loadImages("resource/Ninjia")
         self.currentImage = 0
         self.timer.start(30)
         # 延时，等待所有图片加载完成
@@ -271,7 +271,7 @@ class DeskPet(QtWidgets.QLabel):
         self.setFixedSize(160, 150)
         self.sleeping = False
         self.currentAction = self.Ninjia2
-        self.images = self.loadImages("Deskpet/resource/Ninjia2")
+        self.images = self.loadImages("resource/Ninjia2")
         self.currentImage = 0
         self.timer.start(30)
         # 延时，等待所有图片加载完成
@@ -283,7 +283,7 @@ class DeskPet(QtWidgets.QLabel):
         self.setFixedSize(180, 180)
         self.timer.stop()
         self.currentAction = self.startIdle
-        self.images = self.loadImages("Deskpet/resource/xianzhi")
+        self.images = self.loadImages("resource/xianzhi")
         self.currentImage = 0
         self.timer.start(100)
 
@@ -364,7 +364,7 @@ class XiaobaiWindow(QtWidgets.QWidget):
         self.setGeometry(500, 500, 125, 100)
         self.timer = QtCore.QTimer(self)
         self.timer.timeout.connect(self.updateAnimation)
-        self.images = self.loadImages("Deskpet/resource/xiaobai")
+        self.images = self.loadImages("resource/xiaobai")
         self.currentImage = 0
         self.timer.start(20)
         self.dragPosition = QtCore.QPoint()
